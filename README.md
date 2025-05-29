@@ -25,12 +25,12 @@ Environment-specific settings (such as base URLs) are defined in:
 
 - `src/test/resources/config/dev.properties`
 - `src/test/resources/config/qa.properties`
-- `src/test/resources/config/prod.properties`
 
 The active environment is set via the `env` parameter in `testng.xml`:
 
+At runtime, the framework will dynamically load the correct baseUrl based on the environment.
 ```xml
 <parameter name="env" value="qa" />
 
-At runtime, the framework will dynamically load the correct baseUrl based on the environment.
+
 
